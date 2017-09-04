@@ -11,18 +11,21 @@
 </section>
 
 <script>
-    $(function() { //this line registers this code block executes when the page loads
-        $.get("/tasks").success( function( data ){ //jQuery.get pulls values from db through server via this AJAX request
-            var htmlString = "";
-            
-            $.each(data, function(index, task) { //loops through each Task object in db
-                var liElement = '<li><div class="view"><input class="toggle" type="checkbox"><label>' 
-                + task.title +
-                '</label></div></li>';
-                htmlString += liElement;
-            });
-             var ulTodos = $('.todo-list');
-             ulTodos.html(htmlString);
-        });
+  $(function() {
+    $.get("/tasks").success( function( data ) {
+      var htmlString = "";
+
+      $.each(data, function(index,  task) {
+        var checkedStatus = task.done ? "checked" : "";
+        var liElement = '<li><div class="view"><input class="toggle" type="checkbox"' +
+        checkedStatus +
+        '><label>' +
+         task.title +
+         '</label></div></li>';
+        htmlString += liElement;
+      });
+      var ulTodos = $('.todo-list');
+      ulTodos.html(htmlString);
     });
+  });
 </script>
