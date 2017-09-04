@@ -4,6 +4,18 @@
     </header>
     
     <section class="main">
-        
+        <ul class="todo-list">
+            
+        </ul>
     </section>
 </section>
+
+<script>
+    $(function() { //this line registers this code block executes when the page loads
+        $.get("/tasks").success( function( data ){ //jQuery.get pulls values from db through server via this AJAX request
+            $.each(data, function(index, task) { //loops through each Task object in db
+                console.log(task);
+            });
+        });
+    });
+</script>
