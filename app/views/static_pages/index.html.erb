@@ -24,8 +24,14 @@
          '</label></div></li>';
         htmlString += liElement;
       });
+      
       var ulTodos = $('.todo-list');
       ulTodos.html(htmlString);
+      
+      $('.toggle').change(function(e) {
+        console.log(e.target);
+      });
+      
     });
   });
 </script>
