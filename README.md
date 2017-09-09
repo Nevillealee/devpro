@@ -9,7 +9,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 Ruby, Rails, PostgreSQL, jquery-rails, rspec-rails, factory_girl_rails
 ```
-gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'jquery-rails'
+```
+```
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+  gem "factory_girl_rails", "~> 4.0"
+end
 ```
 
 ### Installing
