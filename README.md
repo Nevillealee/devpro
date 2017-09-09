@@ -126,19 +126,19 @@ Ive written 2 tests with the  tasks_controller to check the functionaliy of the 
 properly listed out.
 
 ```
-        it "should list the tasks in the database" do
-            task1 = FactoryGirl.create(:task)
-            task2 = FactoryGirl.create(:task)
-            task1.update_attributes(title: "something else")
-            get :index
-            expect(response).to have_http_status :success
-            response_value = ActiveSupport::JSON.decode(@response.body) #access the JSON format response in a string
-            expect(response_value.count).to eq(2)
-            response_ids = response_value.collect do |task|
-                task["id"]
-            end
-            expect(response_ids).to eq([task1.id, task2.id])
-        end
+it "should list the tasks in the database" do
+  task1 = FactoryGirl.create(:task)
+  task2 = FactoryGirl.create(:task)
+  task1.update_attributes(title: "something else")
+  get :index
+  expect(response).to have_http_status :success
+  response_value = ActiveSupport::JSON.decode(@response.body) #access the JSON format response in a string
+  expect(response_value.count).to eq(2)
+  response_ids = response_value.collect do |task|
+    task["id"]
+  end
+    expect(response_ids).to eq([task1.id, task2.id])
+end
 ```
 
 ## Built With
