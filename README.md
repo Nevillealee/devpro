@@ -98,7 +98,6 @@ Use the following command for installing the Node.js package.
 ```
 sudo yum install nodejs
 ```
-Congratulations! You are now on Rails over Linux.
 Step 6: Install Database
 
 By default, Rails uses sqlite3, but you may want to install MySQL, PostgreSQL, or other RDBMS. This is optional; if you have the database installed, then you may skip this step and it is not mandatory that you have a database installed to start the rails server. For this tutorial, we are using PostgreSQL database. Therefore use the following commands to install PostgreSQL.
