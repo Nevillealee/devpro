@@ -1,16 +1,15 @@
 # DevPro
 
-Developer program or Devpro is a task manager designed with developers in mind
+Developer program (Devpro) is a task manager to-do list web application built with developers in mind
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
+Ruby, Rails, PostgreSQL, jquery-rails, rspec-rails, factory_girl_rails
 ```
-Give examples
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 ```
 
 ### Installing
