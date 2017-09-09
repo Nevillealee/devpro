@@ -143,7 +143,7 @@ end
 
 ## Built With
 
-* [Rails](http://rubyonrails.org/) - The web framework used
+* [Rails](http://rubyonrails.org/) -  A web-application framework that includes everything needed to create database-backed web applications according to the Model-View-Controller (MVC) pattern.
 * [Rubygems](https://www.ruby-toolbox.com/projects/bundler.html) - Dependency Management
 
 ## Authors
